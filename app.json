@@ -1,0 +1,67 @@
+{
+  "expo": {
+    "name": "Adbeam Recycling",
+    "slug": "adbeam-recycling-v2",
+    "version": "2.0.0",
+    "newArchEnabled": true,
+    "orientation": "portrait",
+    "primaryColor": "#059669",
+    "backgroundColor": "#f0fdf4",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "backgroundColor": "#ffffff",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.adbeam.recycling",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to camera to scan barcodes for recycling and take profile photos.",
+        "NSLocationWhenInUseUsageDescription": "We need your location to verify you're on campus when recycling.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library to set profile photos.",
+        "NSPhotoLibraryAddUsageDescription": "This app needs access to save photos to your library."
+      }
+    },
+    "android": {
+      "package": "com.adbeam.recycling",
+      "permissions": [
+        "CAMERA",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Adbeam Recycling to access your camera to scan barcodes and take profile photos."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUseUsageDescription": "Allow Adbeam Recycling to use your location to verify campus recycling."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you set a profile picture.",
+          "cameraPermission": "The app accesses your camera to let you take a profile picture."
+        }
+      ],
+      "expo-notifications"
+    ]
+  }
+}
